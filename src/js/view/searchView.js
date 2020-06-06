@@ -16,7 +16,7 @@ export const highlightSelected = id => {
     
 };
 
-const limitTitleLength = (title,limit=17) => {
+export const limitTitleLength = (title,limit=17) => {
     const newTitle=[];
     if (title.length>limit) {
         title.split(' ').reduce((acc,cur) => {
@@ -63,7 +63,6 @@ const renderButtons=(page,numResults,resPerPage) => {
         //button to go to prev page
         button=createButton(page,'prev');
     }
-    console.log(button);
     elements.searchResPages.insertAdjacentHTML('afterbegin', button);  
 };
 
