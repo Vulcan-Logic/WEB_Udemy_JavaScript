@@ -142,14 +142,15 @@ window.addEventListener('load', () => {
     likesView.toggledLikedView(state.likes.getNumLikes());
     // render existing likes
     state.likes.likes.forEach(like => likes.likesView.renderLikes(like));
+    controlRecipe();
 })
 
-/*
+
  window.addEventListener('hashchange',controlRecipe);
- window.addEventListener('load', controlRecipe);
+ //window.addEventListener('load',controlRecipe);
  // replaced lines above with the following line 
- */
- ['hashchange','load'].forEach(event=>window.addEventListener(event,controlRecipe));
+ //['hashchange','load'].forEach(
+ //                        event=>window.addEventListener(event,controlRecipe));
 
  // handle recipe button clicks
 

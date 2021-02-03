@@ -4,7 +4,8 @@ import {limitTitleLength} from './searchView';
 
 export const toggleLikes = isLiked => {
     const iconString = isLiked?'icon-heart':'icon-heart-outlined';
-    document.querySelector('.recipe__love use').setAttribute('href',`img/icons.svg#${iconString}`) 
+    document.querySelector('.recipe__love use')
+                            .setAttribute('href',`img/icons.svg#${iconString}`); 
 }
 
 export const toggledLikedView = numLike => {
@@ -31,7 +32,8 @@ export const renderLikes = like => {
 
 export const deleteLikes = id =>
 {
-    const el = document.querySelector(`.likes__link[href*="${id}"]`).parentElement;
+    const el = document.querySelector(`.likes__link[href*="${id}"]`)
+                                                                .parentElement;
     if (el) el.parentElement.removeChild(el);
 }
 

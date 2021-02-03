@@ -12,7 +12,9 @@ export const clearResults = () => {
 export const highlightSelected = id => {
     const resultsAr = Array.from(document.querySelectorAll('.results__link'));
     resultsAr.forEach(el => {el.classList.remove('results__link--active');});
-    document.querySelector(`a[href*="${id}"]`).classList.add('results__link--active');
+    document.querySelector(
+        `a[href*="${id}"]`).classList.add('results__link--active'
+    );
     
 };
 
@@ -72,7 +74,8 @@ const createButton = (page,type) => `
         <span>${type==='next'?page +1:""}</span>
         <svg class="search__icon">
             <use 
-            href="img/icons.svg#icon-triangle-${type==='prev'? 'left': 'right'}">
+            href="img/icons.svg#icon-triangle-${type==='prev'? 'left': 'right'}"
+            >
             </use>
         </svg>
         <span>${type==='prev'? page - 1:""}</span>
